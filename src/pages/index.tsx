@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import { createClient } from './api/contentful'
+import { createClient } from 'libs/contentful'
 
 const Home: NextPage = () => {
   const [posts, setPosts] = useState<any>(['aaa'])
