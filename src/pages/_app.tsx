@@ -1,9 +1,16 @@
 import 'styles/reset.css'
 import 'tailwindcss/tailwind.css'
 import type { AppProps } from 'next/app'
+import { Header, Footer } from 'components/common'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </>
+  )
 }
 
 export default MyApp
