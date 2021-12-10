@@ -36,10 +36,10 @@ const Home: NextPage = () => {
 
       <main>
         <h1>nacal.blog.io</h1>
-        {/* <p>{posts[0].fields.title}</p>
+        <p>{posts[0].fields.title}</p>
         <p>{posts[0].fields.category.fields.name}</p>
         <p>{posts[0].fields.publishedAt}</p>
-        <p>{posts[0].fields.body}</p> */}
+        <p>{posts[0].fields.body}</p>
       </main>
     </div>
   )
