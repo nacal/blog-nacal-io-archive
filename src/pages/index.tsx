@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
+import { Card } from 'components/common'
 import { createClient } from 'libs/contentful'
 
 const Home: NextPage = () => {
-  const [posts, setPosts] = useState<any>(['aaa'])
+  const [posts, setPosts] = useState<any>(null)
 
   useEffect(() => {
     ;(async () => {
@@ -35,10 +36,16 @@ const Home: NextPage = () => {
       </Head>
 
       <h1>nacal.blog.io</h1>
-      <p>{posts[0].fields.title}</p>
-      <p>{posts[0].fields.category.fields.name}</p>
-      <p>{posts[0].fields.publishedAt}</p>
-      <p>{posts[0].fields.body}</p>
+
+      {!posts ? (
+        <p>loading</p>
+      ) : (
+        <Card
+          title={posts[0].fields.title}
+          category={posts[0].fields.category.fields.name}
+          publishedAt={posts[0].fields.publishedAt}
+        />
+      )}
     </>
   )
 }
