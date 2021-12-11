@@ -30,12 +30,12 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>nacal.blog.io</title>
-        <meta name='description' content='nacal.blog.io' />
+        <title>blog.nacal.io</title>
+        <meta name='description' content='blog.nacal.io' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <h1>nacal.blog.io</h1>
+      <h1>blog.nacal.io</h1>
 
       {!posts ? (
         <p>loading</p>
