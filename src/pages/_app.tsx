@@ -1,13 +1,15 @@
 import 'styles/reset.css'
 import 'tailwindcss/tailwind.css'
 import type { AppProps } from 'next/app'
-import { Header, Footer } from 'components/common'
+import { Header, Footer, Main } from 'components/common'
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Header />
-      <Component {...pageProps} />
+      <Main>
+        <Component {...pageProps} />
+      </Main>
       <Footer />
     </>
   )
