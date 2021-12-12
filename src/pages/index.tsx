@@ -34,19 +34,21 @@ const Home: NextPage = () => {
         <meta name='description' content='blog.nacal.io' />
       </Head>
 
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 justify-items-center my-8 mx-4'>
-        {!posts
-          ? Array(4)
-              .fill('')
-              .map((val, index: number) => <SkeletonCard key={index} />)
-          : posts.map((post: any) => (
-              <Card
-                key={post.sys.id}
-                title={post.fields.title}
-                category={post.fields.category.fields.name}
-                publishedAt={post.fields.publishedAt.substr(0, 10)}
-              />
-            ))}
+      <div className='my-16 mx-auto sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 justify-items-center'>
+          {!posts
+            ? Array(4)
+                .fill('')
+                .map((val, index: number) => <SkeletonCard key={index} />)
+            : posts.map((post: any) => (
+                <Card
+                  key={post.sys.id}
+                  title={post.fields.title}
+                  category={post.fields.category.fields.name}
+                  publishedAt={post.fields.publishedAt.substr(0, 10)}
+                />
+              ))}
+        </div>
       </div>
     </>
   )
