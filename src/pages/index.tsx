@@ -32,20 +32,22 @@ const Home: NextPage = () => {
       <Head>
         <title>blog.nacal.io</title>
         <meta name='description' content='blog.nacal.io' />
-        <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <h1>blog.nacal.io</h1>
-
-      {!posts ? (
-        <p>loading</p>
-      ) : (
-        <Card
-          title={posts[0].fields.title}
-          category={posts[0].fields.category.fields.name}
-          publishedAt={posts[0].fields.publishedAt}
-        />
-      )}
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 justify-items-center my-8 mx-4 font-ja'>
+        {!posts ? (
+          <p>loading</p>
+        ) : (
+          posts.map((post: any) => (
+            <Card
+              key={post.sys.id}
+              title={post.fields.title}
+              category={post.fields.category.fields.name}
+              publishedAt={post.fields.publishedAt.substr(0, 10)}
+            />
+          ))
+        )}
+      </div>
     </>
   )
 }
