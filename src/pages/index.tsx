@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import { Card } from 'components/common'
+import { Card, SkeletonCard } from 'components/common'
 import { createClient } from 'libs/contentful'
 
 const Home: NextPage = () => {
@@ -35,18 +35,18 @@ const Home: NextPage = () => {
       </Head>
 
       <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 justify-items-center my-8 mx-4'>
-        {!posts ? (
-          <p>loading</p>
-        ) : (
-          posts.map((post: any) => (
-            <Card
-              key={post.sys.id}
-              title={post.fields.title}
-              category={post.fields.category.fields.name}
-              publishedAt={post.fields.publishedAt.substr(0, 10)}
-            />
-          ))
-        )}
+        {!posts
+          ? Array(4)
+              .fill('')
+              .map((val, index: number) => <SkeletonCard key={index} />)
+          : posts.map((post: any) => (
+              <Card
+                key={post.sys.id}
+                title={post.fields.title}
+                category={post.fields.category.fields.name}
+                publishedAt={post.fields.publishedAt.substr(0, 10)}
+              />
+            ))}
       </div>
     </>
   )

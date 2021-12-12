@@ -1,3 +1,3 @@
-import Card from './Card/Card'
+import { Card, SkeletonCard } from './Card'
 
-export { Card }
+export { Card, SkeletonCard }
