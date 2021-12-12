@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         ja: ['Noto Sans JP', '游ゴシック', 'Yu Gothic', '游ゴシック体'],
+        en: ['Roboto', 'arial', 'sans-serif'],
       },
     },
   },
