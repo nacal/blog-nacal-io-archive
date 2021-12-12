@@ -1,6 +1,7 @@
 import 'styles/reset.css'
 import 'tailwindcss/tailwind.css'
 import type { AppProps } from 'next/app'
+import { SkeletonTheme } from 'react-loading-skeleton'
 import { Header, Footer, Main } from 'components/layout'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
@@ -8,7 +9,9 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     <>
       <Header />
       <Main>
-        <Component {...pageProps} />
+        <SkeletonTheme baseColor='#bbb' highlightColor='#ddd'>
+          <Component {...pageProps} />
+        </SkeletonTheme>
       </Main>
       <Footer />
     </>
