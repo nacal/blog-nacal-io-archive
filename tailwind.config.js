@@ -8,6 +8,10 @@ module.exports = {
         ja: ['Noto Sans JP', '游ゴシック', 'Yu Gothic', '游ゴシック体'],
         en: ['Roboto', 'arial', 'sans-serif'],
       },
+      colors: {
+        light: '#ddd',
+        dark: '#333',
+      },
     },
   },
   variants: {

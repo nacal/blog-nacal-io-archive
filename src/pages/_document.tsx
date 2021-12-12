@@ -25,7 +25,7 @@ const MyDocument = () => {
           href='https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Quicksand:400,700&display=swap&subset=japanese'
         />
       </Head>
-      <body className='font-ja'>
+      <body className='font-ja bg-dark'>
         <Main />
         <NextScript />
       </body>

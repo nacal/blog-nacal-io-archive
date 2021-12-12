@@ -6,8 +6,8 @@ type Props = {
 
 const Card: React.FC<Props> = (props) => {
   return (
-    <article className='flex flex-col justify-between py-4 px-2 w-64 h-64 text-white bg-gray-700 rounded-3xl'>
-      <h2 className='text-4xl'>{props.title}</h2>
+    <article className='flex flex-col justify-between py-4 px-2 w-64 h-64 text-dark bg-light rounded-3xl'>
+      <h2 className='text-4xl font-bold break-words'>{props.title}</h2>
       <div className='flex justify-between'>
         <p>{props.category}</p>
         <p>{props.publishedAt}</p>
