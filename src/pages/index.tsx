@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         <meta name='description' content='blog.nacal.io' />
       </Head>
 
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 justify-items-center my-8 mx-4 font-ja'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 justify-items-center my-8 mx-4'>
         {!posts ? (
           <p>loading</p>
         ) : (
