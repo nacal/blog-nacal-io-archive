@@ -46,6 +46,7 @@ const Home: NextPage = () => {
                   title={post.fields.title}
                   category={post.fields.category.fields.name}
                   publishedAt={post.fields.publishedAt.substr(0, 10)}
+                  slug={post.sys.id}
                 />
               ))}
         </div>
