@@ -3,7 +3,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 
 const SkeletonCard: React.FC = () => {
   return (
-    <article className='flex flex-col justify-between py-4 px-2 w-64 h-64 text-white bg-gray-700 rounded-3xl'>
+    <article className='flex flex-col justify-between py-4 px-2 w-64 h-64 text-dark bg-light rounded-3xl'>
       <h2 className='text-4xl'>
         <Skeleton count={4} />
       </h2>
